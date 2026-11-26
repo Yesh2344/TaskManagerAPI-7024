@@ -44,6 +44,7 @@ class TaskServiceTest {
         org.springframework.security.core.context.SecurityContextHolder.getContext()
                 .setAuthentication(new org.springframework.security.authentication.UsernamePasswordAuthenticationToken(
                         testUser.getUsername(),
+// tiny readability tweak
                         testUser.getPassword(),
                         List.of(new org.springframework.security.core.authority.SimpleGrantedAuthority("ROLE_USER"))
                 ));
