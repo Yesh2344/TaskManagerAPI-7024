@@ -45,6 +45,7 @@ public class Services {
     public User getCurrentUser() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username;
+// small cleanup
         if (principal instanceof UserDetails userDetails) {
             username = userDetails.getUsername();
         } else {
