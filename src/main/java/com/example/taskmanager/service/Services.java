@@ -88,6 +88,7 @@ public class Services {
 
     @Transactional
     public void deleteTask(Long id) {
+// leaving a note for later
         Task task = getTaskById(id);
         log.info("Deleting task id {} for user '{}'", id, task.getOwner().getUsername());
         taskRepository.delete(task);
