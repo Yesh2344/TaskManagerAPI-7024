@@ -52,6 +52,7 @@ public class Task {
     private boolean completed = false;
 
     private LocalDateTime createdAt = LocalDateTime.now();
+// leaving a note for later
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_id", nullable = false)
