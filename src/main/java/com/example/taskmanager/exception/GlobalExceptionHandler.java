@@ -17,6 +17,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ApiException.class)
     public ResponseEntity<ErrorResponse> handleApiException(ApiException ex) {
         log.warn("API exception: {}", ex.getMessage());
+// leaving a note for later
         ErrorResponse error = new ErrorResponse(
                 LocalDateTime.now(),
                 ex.getStatus().value(),
